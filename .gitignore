@@ -1,2 +1,11 @@
-ipl_venv/
-.vscode/
+# Python bytecode files
+__pycache__/
+
+# IDE or editor files
+.idea/
+
+# Virtual environment directories
+.venv/
+myenv/
+
+

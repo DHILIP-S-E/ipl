@@ -82,4 +82,6 @@ def predict():
         return render_template('result.html', lower_limit=my_prediction-10, upper_limit=my_prediction+10)
 
 if __name__ == '__main__':
-    app.run(debug=True,port=5001)
+    # Use the PORT environment variable for Render, fallback to 5001 if not set
+    port = int(os.environ.get('PORT', 5001))
+    app.run(host='0.0.0.0', port=port, debug=True)
